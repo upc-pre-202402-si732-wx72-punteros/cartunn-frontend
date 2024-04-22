@@ -34,7 +34,7 @@
           <section class="sidebar-subtext">
               <span>PRINCIPAL</span>
           </section>
-          <a mat-list-item>
+          <a mat-list-item routerLink="/">
             <div class="sidebar-option">
               <mat-icon aria-hidden="false" fontIcon="home"></mat-icon>
               <span>Home</span>
@@ -54,17 +54,11 @@
           </a>
           <a mat-list-item>
             <div class="sidebar-option">
-              <mat-icon aria-hidden="false" fontIcon="notifications"></mat-icon>
-              <span>Notifications</span>
-            </div>
-          </a>
-          <a mat-list-item>
-            <div class="sidebar-option">
               <mat-icon aria-hidden="false" fontIcon="report"></mat-icon>
               <span>Reports</span>
             </div>
           </a>
-          <a mat-list-item>
+          <a mat-list-item routerLink="/shopping-cart">
             <div class="sidebar-option">
               <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
               <span>Your orders</span>
@@ -80,12 +74,12 @@
             <span>PREFERENCES</span>
           </section>
           <a mat-list-item>
-            <div class="sidebar-option">
+            <div class="sidebar-option" routerLink="/settings">
               <mat-icon aria-hidden="false" fontIcon="tune"></mat-icon>
               <span>Settings</span>
             </div>
           </a>
-          <a mat-list-item>
+          <a mat-list-item routerLink="/help-center">
             <div class="sidebar-option">
               <mat-icon aria-hidden="false" fontIcon="live_help"></mat-icon>
               <span>Help & Center</span>
