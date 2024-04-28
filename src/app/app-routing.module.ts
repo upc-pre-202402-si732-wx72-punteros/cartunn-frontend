@@ -10,7 +10,7 @@ import { SettingsComponent } from "./public/pages/settings/settings.component";
 import { ShoppingCartComponent} from "./public/pages/shopping-cart/shopping-cart.component";
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'help-center', component: HelpCenterComponent },
   { path: 'product', component: ProductComponent },
   { path: 'searcher', component: SearcherComponent },
