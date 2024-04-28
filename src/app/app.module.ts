@@ -15,7 +15,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './public/pages/home/home.component';
 import { HelpCenterComponent } from './public/pages/help-center/help-center.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
-import { PaymentGatewayComponent } from './public/pages/payment-gateway/payment-gateway.component';
 import { ProductComponent } from './public/pages/product/product.component';
 import { SearcherComponent } from './public/pages/searcher/searcher.component';
 import { SettingsComponent } from './public/pages/settings/settings.component';
@@ -28,7 +27,6 @@ import { ShoppingCartComponent } from './public/pages/shopping-cart/shopping-car
     HomeComponent,
     HelpCenterComponent,
     PageNotFoundComponent,
-    PaymentGatewayComponent,
     ProductComponent,
     SearcherComponent,
     SettingsComponent,
