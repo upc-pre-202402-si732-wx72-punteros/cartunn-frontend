@@ -1,0 +1,41 @@
+<div class="form-container">
+  <h1>Sign in</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Email address</mat-label>
+    <input type="email" matInput />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+  <div
+    style="display: flex; justify-content: space-between; align-items: center"
+  >
+    <a
+      href="/"
+      style="background-color: #5766f5; color: white; padding: 1.5rem"
+      mat-flat-button
+    >
+      Login
+    </a>
+    <a class="link-to-reset-password" href="/reset-password"
+    >Forgot your password?</a
+    >
+  </div>
+  <a
+    href="/sign-up"
+    style="background-color: #5766f5; color: white; padding: 1.5rem"
+    mat-flat-button
+  >
+    CREATE NEW ACCOUT
+  </a>
+</div>

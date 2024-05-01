@@ -69,27 +69,82 @@
   ],
   "notifications": [
     {
-      "type": "Information",
-      "description": "This is a information message"
+      "type": "ℹ\uFE0F\u200B Information",
+      "description": "This is an informational message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum lacinia mauris, at fermentum libero sollicitudin vel. Vivamus eu turpis eget velit sagittis ullamcorper. Ut et semper lorem. Proin tempor fringilla velit, ut congue neque luctus sed. Aliquam erat volutpat. Integer nec turpis sit amet risus hendrerit finibus nec in mauris. Vestibulum commodo volutpat ex, id placerat arcu tincidunt vel."
     },
     {
-      "type": "Error",
-      "description": "This is a error message"
+      "type": "❌ Error",
+      "description": "This is an error message. Maecenas ut velit non est mollis scelerisque vel a dui. Duis aliquam interdum leo, nec feugiat elit interdum at. Donec viverra sapien id nunc placerat, nec scelerisque orci consequat. Quisque suscipit vulputate justo, id bibendum elit eleifend nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae."
     },
     {
-      "type": "Success",
-      "description": "This is a success message"
+      "type": "✔\uFE0F\u200B Success",
+      "description": "This is a success message. Morbi non efficitur odio. Nulla aliquet, ipsum euismod vestibulum feugiat, eros dolor cursus orci, vel pharetra felis libero nec metus. Sed viverra consectetur nisi, eu eleifend lectus blandit nec. Aliquam non aliquet ex, nec ultricies magna. Nam in condimentum mauris. Nulla facilisi."
     },
     {
-      "type": "In process",
-      "description": "This is a in process message"
+      "type": "\uD83D\uDD03\u200B In process",
+      "description": "This is a message indicating that the process is in progress. Sed at lacus ex. Mauris id libero sit amet enim ullamcorper placerat. Aliquam vel odio eget eros suscipit cursus. Pellentesque quis nunc sed nisl rhoncus suscipit. Duis ultricies ex vel odio dapibus, ac facilisis orci fermentum. Vestibulum consectetur neque eu justo feugiat, sed ultrices leo varius."
     }
   ],
   "status-report": [
     {
-      "modified-part": "Spring Kit Eibach Pro Kit For Ford Focus Limousine",
+      "modified-part": "Suspension Upgrade: Eibach Pro-Kit for Ford Focus Sedan",
       "date": "2022-05-01",
-      "status": "Error"
+      "status": "❌ Error"
+    },
+    {
+      "modified-part": "Engine Tuning: APR Stage 2 Upgrade for Volkswagen Golf GTI",
+      "date": "2022-05-02",
+      "status": "❌ Errors"
+    },
+    {
+      "modified-part": "Brake System Overhaul: Brembo Gran Turismo Kit for Subaru WRX STI",
+      "date": "2022-05-03",
+      "status": "ℹ\uFE0F Information"
+    },
+    {
+      "modified-part": "Exhaust System Replacement: Akrapovic Evolution Line for BMW M3",
+      "date": "2022-05-04",
+      "status": "ℹ\uFE0F Information"
+    },
+    {
+      "modified-part": "Turbocharger Upgrade: Garrett GTX3582R for Mitsubishi Lancer Evolution",
+      "date": "2022-05-05",
+      "status": "❌ Errors"
+    },
+    {
+      "modified-part": "Intake System Enhancement: Eventuri Carbon Fiber Intake for Audi RS3",
+      "date": "2022-05-06",
+      "status": "❌ Error"
+    },
+    {
+      "modified-part": "Transmission Rebuild: Pfitzner Performance Gearbox for Nissan GT-R",
+      "date": "2022-05-07",
+      "status": "ℹ\uFE0F Information"
+    },
+    {
+      "modified-part": "Wheels and Tires Upgrade: HRE Performance Wheels with Michelin Pilot Sport 4S Tires",
+      "date": "2022-05-08",
+      "status": "ℹ\uFE0F Information"
+    },
+    {
+      "modified-part": "Body Kit Installation: Liberty Walk LB★Works Kit for Lamborghini Aventador",
+      "date": "2022-05-09",
+      "status": "❌ Errors"
+    },
+    {
+      "modified-part": "ECU Remapping: COBB Accessport V3 for Subaru BRZ",
+      "date": "2022-05-10",
+      "status": "❌ Error"
+    },
+    {
+      "modified-part": "Suspension Adjustment: KW Variant 3 Coilovers for Porsche 911",
+      "date": "2022-05-11",
+      "status": "ℹ\uFE0F Information"
+    },
+    {
+      "modified-part": "Interior Customization: Alcantara Upholstery for BMW M4",
+      "date": "2022-05-12",
+      "status": "❌ Error"
     }
   ],
   "your-cart": [

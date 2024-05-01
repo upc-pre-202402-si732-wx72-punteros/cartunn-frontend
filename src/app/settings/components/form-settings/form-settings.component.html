@@ -1,0 +1,56 @@
+<div class="form-container">
+  <mat-button-toggle-group
+    class="custom-button-toggle-group"
+    name="user-type"
+    aria-label="user types"
+    hideSingleSelectionIndicator="true"
+  >
+    <mat-button-toggle checked="true" value="client"
+    >AS A CLIENT</mat-button-toggle
+    >
+    <mat-button-toggle value="staff">AS A STAFF MEMBER</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <div class="names-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input placeholder="Name" matInput />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Last name</mat-label>
+      <input placeholder="Last name" matInput />
+    </mat-form-field>
+  </div>
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Confirm your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+  <button
+    style="background-color: #5766f5; color: white; padding: 1.5rem"
+    mat-flat-button
+  >
+    SAVE CHANGES
+  </button>
+</div>

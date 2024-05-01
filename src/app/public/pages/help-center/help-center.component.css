@@ -1,0 +1,18 @@
+.main-conatiner {
+  padding-top: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  margin: auto;
+}
+
+.title {
+  font-weight: bolder;
+}
+
+.content {
+  margin-top: 0.5em;
+  width: 80%;
+}

@@ -1,0 +1,14 @@
+<ng-container>
+  <section class="container">
+    <mat-card class="card" *ngFor="let product of products">
+      <button mat-icon-button aria-label="Favorite" (click)="toggleFavorite(product)" [class.favorite-active]="product.isFavorite">
+        <mat-icon>{{ product.isFavorite ? 'favorite' : 'favorite_border' }}</mat-icon>
+      </button>
+      <span><strong>{{ product.title }}</strong></span>
+      <span><strong>{{ product.model }}</strong></span>
+      <img [src]="product.image" alt="{{ product.title }}" />
+      <span class="price"><strong>${{ product.price }}</strong></span>
+      <button mat-flat-button class="order-button" color="primary">ORDER</button>
+    </mat-card>
+  </section>
+</ng-container>
