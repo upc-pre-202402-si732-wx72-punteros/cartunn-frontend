@@ -13,12 +13,14 @@ import { NotificationsPanelComponent } from "./public/pages/notifications-panel/
 import { LoginComponent } from "./public/pages/login/login.component";
 import { SignUpComponent } from "./public/pages/sign-up/sign-up.component";
 import { ResetPasswordComponent} from "./public/pages/reset-password/reset-password.component";
+import { FavoritesPanelComponent} from "./public/pages/favorites-panel/favorites-panel.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeContentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
+  { path: 'favorites', component: FavoritesPanelComponent },
   { path: 'help-center', component: HelpCenterComponent },
   { path: 'product', component: ProductComponent },
   { path: 'searcher', component: SearcherComponent },

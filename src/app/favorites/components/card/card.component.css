@@ -9,12 +9,22 @@
 
 .subtitle {
   font-weight: bold;
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
 }
 
-.notification {
+.favorites {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
+}
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2em 0;
+}
+
+.card {
+  width: 31%;
+  padding: 0 2em;
 }

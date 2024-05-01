@@ -45,6 +45,9 @@ import { FormSettingsComponent } from './settings/components/form-settings/form-
 import { HomeContentComponent } from './public/pages/home-content/home-content.component';
 import { ProductsComponent } from './products/components/products/products.component';
 
+import { FavoritesCardComponent } from './favorites/components/card/card.component';
+import { FavoritesPanelComponent } from './public/pages/favorites-panel/favorites-panel.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +72,9 @@ import { ProductsComponent } from './products/components/products/products.compo
     CardSettingsComponent,
     FormSettingsComponent,
     HomeContentComponent,
-    ProductsComponent
+    ProductsComponent,
+    FavoritesCardComponent,
+    FavoritesPanelComponent
   ],
   imports: [
     BrowserModule,

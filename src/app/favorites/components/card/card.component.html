@@ -1,0 +1,17 @@
+<mat-card class="container">
+  <mat-card-content>
+    <h1 class="title">📜​ List of favorites</h1>
+    <section class="cards-container">
+      <mat-card *ngFor="let product of favorites" class="card">
+        <mat-card-actions class="">
+          <button mat-icon-button-color="white" aria-label="Delete"><mat-icon>delete_outline</mat-icon></button>
+        </mat-card-actions>
+        <span><strong>{{ product.title }}</strong></span>
+        <span><strong>{{ product.model }}</strong></span>
+        <img [src]="product.image" alt="{{ product.title }}" />
+        <span class="price"><strong>${{ product.price }}</strong></span>
+        <button mat-flat-button class="order-button" color="primary">ORDER</button>
+      </mat-card>
+    </section>
+  </mat-card-content>
+</mat-card>
