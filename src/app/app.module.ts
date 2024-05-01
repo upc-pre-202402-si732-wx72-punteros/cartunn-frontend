@@ -33,6 +33,14 @@ import { MatCardTitle } from "@angular/material/card";
 import { HttpClientModule } from '@angular/common/http';
 import { NotificationsCardComponent } from './notifications/components/card/card.component';
 import { ReportCardComponent } from "./reports/components/card/card.component";
+import { CardSettingsComponent } from './settings/components/card-settings/card-settings.component';
+import { FormSettingsComponent } from './settings/components/form-settings/form-settings.component';
+import { MatButtonToggleGroup } from "@angular/material/button-toggle";
+import { MatButtonToggle } from "@angular/material/button-toggle";
+import { MatFormField } from "@angular/material/form-field";
+import { MatInput } from "@angular/material/input";
+import { MatButtonToggleModule } from "@angular/material/button-toggle";
+import { MatLabel } from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -48,7 +56,9 @@ import { ReportCardComponent } from "./reports/components/card/card.component";
     NotificationsPanelComponent,
     NotificationsCardComponent,
     ReportCardComponent,
-    ReportsPanelComponent
+    ReportsPanelComponent,
+    CardSettingsComponent,
+    FormSettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +76,13 @@ import { ReportCardComponent } from "./reports/components/card/card.component";
     MatCardContent,
     MatCard,
     MatCardTitle,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonToggleGroup,
+    MatButtonToggle,
+    MatFormField,
+    MatInput,
+    MatButtonToggleModule,
+    MatLabel
 ],
   providers: [
     provideAnimationsAsync()
