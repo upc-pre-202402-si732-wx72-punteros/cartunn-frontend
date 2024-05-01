@@ -50,3 +50,7 @@
   display: block;
   margin-left: auto;
 }
+
+.main-container {
+  padding: 0 12em;
+}

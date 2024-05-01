@@ -25,7 +25,9 @@
         <button mat-icon-button *ngIf="(mobileQuery.matches && !isSearcherExpanded) || !mobileQuery.matches || areIconsExpanded" routerLink="/notifications">
           <mat-icon fontIcon="notifications"></mat-icon>
         </button>
-        <button mat-icon-button><mat-icon fontIcon="account_circle"></mat-icon></button>
+        <button mat-icon-button routerLink="/login">
+          <mat-icon fontIcon="account_circle"></mat-icon>
+        </button>
       </section>
     </mat-toolbar>
     <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
@@ -49,7 +51,7 @@
           <a mat-list-item  routerLink="/notifications">
             <div class="sidebar-option">
               <mat-icon aria-hidden="false" fontIcon="notifications"></mat-icon>
-              <span>Notifications</span>
+              <span>Your notifications</span>
             </div>
           </a>
           <a mat-list-item routerLink="/reports">
@@ -61,13 +63,7 @@
           <a mat-list-item routerLink="/shopping-cart">
             <div class="sidebar-option">
               <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
-              <span>Your orders</span>
-            </div>
-          </a>
-          <a mat-list-item>
-            <div class="sidebar-option">
-              <mat-icon aria-hidden="false" fontIcon="directions_car"></mat-icon>
-              <span>Aditional services</span>
+              <span>Shopping cart</span>
             </div>
           </a>
           <section class="sidebar-subtext">
