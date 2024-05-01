@@ -6,6 +6,8 @@ export class Product {
   manufacturer: string;
   image: string;
   price: number;
+  isFavorite: boolean;
+
   constructor() {
     this.id = 0;
     this.title = "";
@@ -14,5 +16,6 @@ export class Product {
     this.manufacturer = "";
     this.image = "";
     this.price = 0;
+    this.isFavorite= false;
   }
 }

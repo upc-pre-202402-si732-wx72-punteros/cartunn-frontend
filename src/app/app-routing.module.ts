@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HelpCenterComponent } from "./public/pages/help-center/help-center.component";
-import { HomeComponent } from "./public/pages/home/home.component";
+import { HomeContentComponent} from "./public/pages/home-content/home-content.component";
 import { PageNotFoundComponent } from "./public/pages/page-not-found/page-not-found.component";
 import { ProductComponent } from "./public/pages/product/product.component";
 import { SearcherComponent } from "./public/pages/searcher/searcher.component";
@@ -15,7 +15,7 @@ import { SignUpComponent } from "./public/pages/sign-up/sign-up.component";
 import { ResetPasswordComponent} from "./public/pages/reset-password/reset-password.component";
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeContentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'reset-password', component: ResetPasswordComponent },

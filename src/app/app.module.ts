@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { SidebarComponent } from './public/components/sidebar/sidebar.component';
-import { HomeComponent } from './public/pages/home/home.component';
 import { HelpCenterComponent } from './public/pages/help-center/help-center.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import { ProductComponent } from './public/pages/product/product.component';
@@ -43,12 +42,13 @@ import { MatMenuModule } from "@angular/material/menu";
 
 import { CardSettingsComponent } from './settings/components/card-settings/card-settings.component';
 import { FormSettingsComponent } from './settings/components/form-settings/form-settings.component';
+import { HomeContentComponent } from './public/pages/home-content/home-content.component';
+import { ProductsComponent } from './products/components/products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    HomeComponent,
     HelpCenterComponent,
     PageNotFoundComponent,
     ProductComponent,
@@ -67,7 +67,9 @@ import { FormSettingsComponent } from './settings/components/form-settings/form-
     ResetPasswordFormComponent,
     SignUpFormComponent,
     CardSettingsComponent,
-    FormSettingsComponent
+    FormSettingsComponent,
+    HomeContentComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
