@@ -7,7 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { SidebarComponent } from './public/components/sidebar/sidebar.component';
 
-import { MatListModule } from '@angular/material/list';
+import {MatListModule, MatNavList} from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -27,12 +27,28 @@ import { MatExpansionPanelTitle} from "@angular/material/expansion";
 import { MatExpansionPanelDescription} from "@angular/material/expansion";
 
 import { NotificationsPanelComponent } from './public/pages/notifications-panel/notifications-panel.component';
-import { MatCard } from "@angular/material/card";
+import {MatCard, MatCardModule} from "@angular/material/card";
 import { MatCardContent } from "@angular/material/card";
 import { MatCardTitle } from "@angular/material/card";
 import { HttpClientModule } from '@angular/common/http';
 import { NotificationsCardComponent } from './notifications/components/card/card.component';
 import { ReportCardComponent } from "./reports/components/card/card.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatCheckbox} from "@angular/material/checkbox";
+import {
+  MatDatepicker,
+  MatDatepickerInput,
+  MatDatepickerModule,
+  MatDatepickerToggle
+} from "@angular/material/datepicker";
+import {MatHint, MatInputModule, MatLabel} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {NgOptimizedImage} from "@angular/common";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatMenuModule} from "@angular/material/menu";
+import { ProductsCardComponent } from './products/components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +64,8 @@ import { ReportCardComponent } from "./reports/components/card/card.component";
     NotificationsPanelComponent,
     NotificationsCardComponent,
     ReportCardComponent,
-    ReportsPanelComponent
+    ReportsPanelComponent,
+    ProductsCardComponent
   ],
   imports: [
     BrowserModule,
@@ -66,10 +83,28 @@ import { ReportCardComponent } from "./reports/components/card/card.component";
     MatCardContent,
     MatCard,
     MatCardTitle,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatNavList,
+    MatButtonToggleModule,
+    MatCheckbox,
+    MatDatepicker,
+    MatDatepickerToggle,
+    MatDatepickerInput,
+    MatInputModule,
+    MatFormFieldModule,
+    NgOptimizedImage,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatHint,
+    MatLabel,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule
 ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    MatDatepickerModule
   ],
   bootstrap: [AppComponent]
 })

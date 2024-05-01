@@ -10,10 +10,6 @@ export class BaseService {
 
   constructor(protected http: HttpClient) { }
 
-  getProducts(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/products`);
-  }
-
   getFavoritesList(): Observable<any> {
     return this.http.get(`${this.baseUrl}/favorites-list`);
   }

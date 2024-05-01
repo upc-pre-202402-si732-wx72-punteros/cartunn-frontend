@@ -1,0 +1,17 @@
+<mat-card *ngFor="let product of products" class="product-card row">
+
+  <mat-card-content class="column-card-content">
+    <div class="column-card-img">
+      <img mat-card-image [src]="product.image" [alt]="product.title" class="img-card"/>
+    </div>
+    <div class="column-card-desc">
+      <p> {{ product.title }}</p>
+      <p> {{ product.model }}</p>
+      <p> {{ product.price }}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="actions-section column-card-action">
+    <button mat-icon-button-color="white" aria-label="Delete"><mat-icon>delete_outline</mat-icon></button>
+  </mat-card-actions>
+</mat-card>
+<p> Total $1200</p>
