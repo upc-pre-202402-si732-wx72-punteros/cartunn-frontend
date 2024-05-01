@@ -7,12 +7,18 @@ import { PageNotFoundComponent } from "./public/pages/page-not-found/page-not-fo
 import { ProductComponent } from "./public/pages/product/product.component";
 import { SearcherComponent } from "./public/pages/searcher/searcher.component";
 import { SettingsComponent } from "./public/pages/settings/settings.component";
-import { ShoppingCartComponent} from "./public/pages/shopping-cart/shopping-cart.component";
-import { ReportsPanelComponent} from "./public/pages/reports-panel/reports-panel.component";
-import { NotificationsPanelComponent} from "./public/pages/notifications-panel/notifications-panel.component";
+import { ShoppingCartComponent } from "./public/pages/shopping-cart/shopping-cart.component";
+import { ReportsPanelComponent } from "./public/pages/reports-panel/reports-panel.component";
+import { NotificationsPanelComponent } from "./public/pages/notifications-panel/notifications-panel.component";
+import { LoginComponent } from "./public/pages/login/login.component";
+import { SignUpComponent } from "./public/pages/sign-up/sign-up.component";
+import { ResetPasswordComponent} from "./public/pages/reset-password/reset-password.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'help-center', component: HelpCenterComponent },
   { path: 'product', component: ProductComponent },
   { path: 'searcher', component: SearcherComponent },

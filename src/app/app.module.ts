@@ -41,6 +41,12 @@ import { MatFormField } from "@angular/material/form-field";
 import { MatInput } from "@angular/material/input";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { MatLabel } from "@angular/material/form-field";
+import { LoginComponent } from './public/pages/login/login.component';
+import { SignUpComponent } from './public/pages/sign-up/sign-up.component';
+import { ResetPasswordComponent } from './public/pages/reset-password/reset-password.component';
+import { LoginFormComponent } from './public/components/login-form/login-form.component';
+import { ResetPasswordFormComponent } from './public/components/reset-password-form/reset-password-form.component';
+import { SignUpFormComponent } from './public/components/sign-up-form/sign-up-form.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +64,13 @@ import { MatLabel } from "@angular/material/form-field";
     ReportCardComponent,
     ReportsPanelComponent,
     CardSettingsComponent,
-    FormSettingsComponent
+    FormSettingsComponent,
+    LoginComponent,
+    SignUpComponent,
+    ResetPasswordComponent,
+    LoginFormComponent,
+    ResetPasswordFormComponent,
+    SignUpFormComponent
   ],
   imports: [
     BrowserModule,
