@@ -1,0 +1,18 @@
+.container {
+  width: 50vw;
+  margin: auto;
+}
+
+.title {
+  font-weight: bolder;
+}
+
+.subtitle {
+  font-weight: bold;
+}
+
+.notification {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
