@@ -19,10 +19,19 @@ import { ProductComponent } from './public/pages/product/product.component';
 import { SearcherComponent } from './public/pages/searcher/searcher.component';
 import { SettingsComponent } from './public/pages/settings/settings.component';
 import { ShoppingCartComponent } from './public/pages/shopping-cart/shopping-cart.component';
+
 import { MatExpansionPanel} from "@angular/material/expansion";
 import { MatExpansionPanelHeader} from "@angular/material/expansion";
 import { MatExpansionPanelTitle} from "@angular/material/expansion";
 import { MatExpansionPanelDescription} from "@angular/material/expansion";
+
+import { NotificationsPanelComponent } from './public/pages/notifications-panel/notifications-panel.component';
+import { MatCard } from "@angular/material/card";
+import { MatCardContent } from "@angular/material/card";
+import { MatCardTitle } from "@angular/material/card";
+import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './notifications/components/card/card.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +43,9 @@ import { MatExpansionPanelDescription} from "@angular/material/expansion";
     ProductComponent,
     SearcherComponent,
     SettingsComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    NotificationsPanelComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -45,10 +56,17 @@ import { MatExpansionPanelDescription} from "@angular/material/expansion";
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
+
     MatExpansionPanel,
     MatExpansionPanelTitle,
     MatExpansionPanelHeader,
-    MatExpansionPanelDescription
+    MatExpansionPanelDescription,
+
+    MatCardContent,
+    MatCard,
+    MatCardTitle,
+    HttpClientModule
+
 ],
   providers: [
     provideAnimationsAsync()

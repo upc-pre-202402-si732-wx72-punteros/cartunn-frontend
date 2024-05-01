@@ -20,9 +20,9 @@
           <mat-icon fontIcon="search"></mat-icon>
         </button>
         <button mat-icon-button *ngIf="(mobileQuery.matches && !isSearcherExpanded) || !mobileQuery.matches || areIconsExpanded">
-          <mat-icon fontIcon="favorites"></mat-icon>
+          <mat-icon fontIcon="favorites" ></mat-icon>
         </button>
-        <button mat-icon-button *ngIf="(mobileQuery.matches && !isSearcherExpanded) || !mobileQuery.matches || areIconsExpanded">
+        <button mat-icon-button *ngIf="(mobileQuery.matches && !isSearcherExpanded) || !mobileQuery.matches || areIconsExpanded" routerLink="/notifications">
           <mat-icon fontIcon="notifications"></mat-icon>
         </button>
         <button mat-icon-button><mat-icon fontIcon="account_circle"></mat-icon></button>
@@ -46,7 +46,7 @@
               <span>Favorites</span>
             </div>
           </a>
-          <a mat-list-item>
+          <a mat-list-item  routerLink="/notifications">
             <div class="sidebar-option">
               <mat-icon aria-hidden="false" fontIcon="notifications"></mat-icon>
               <span>Notifications</span>
