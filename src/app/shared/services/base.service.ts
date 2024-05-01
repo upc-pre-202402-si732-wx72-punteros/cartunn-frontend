@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {environment} from "../../../environments/environment.development";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BaseService {
-  protected baseUrl = 'http://localhost:3000';
+  protected baseUrl = `${environment.serverBasePath}`;
 
   constructor(protected http: HttpClient) { }
 
