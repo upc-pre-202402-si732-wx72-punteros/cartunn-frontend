@@ -19,6 +19,10 @@ import { ProductComponent } from './public/pages/product/product.component';
 import { SearcherComponent } from './public/pages/searcher/searcher.component';
 import { SettingsComponent } from './public/pages/settings/settings.component';
 import { ShoppingCartComponent } from './public/pages/shopping-cart/shopping-cart.component';
+import { MatExpansionPanel} from "@angular/material/expansion";
+import { MatExpansionPanelHeader} from "@angular/material/expansion";
+import { MatExpansionPanelTitle} from "@angular/material/expansion";
+import { MatExpansionPanelDescription} from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -40,7 +44,11 @@ import { ShoppingCartComponent } from './public/pages/shopping-cart/shopping-car
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatExpansionPanel,
+    MatExpansionPanelTitle,
+    MatExpansionPanelHeader,
+    MatExpansionPanelDescription
 ],
   providers: [
     provideAnimationsAsync()
