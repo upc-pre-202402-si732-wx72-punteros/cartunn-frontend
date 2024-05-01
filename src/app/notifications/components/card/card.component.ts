@@ -3,11 +3,11 @@ import { NotificationsApiService} from "../../services/notifications-api.service
 import { Notifications} from "../../model/notifications.entity";
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-card-notifications',
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
-export class CardComponent {
+export class NotificationsCardComponent {
   notifications: Notifications[] = [];
 
   constructor(private notificationsService: NotificationsApiService) { }
