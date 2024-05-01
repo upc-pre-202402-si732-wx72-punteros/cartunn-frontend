@@ -8,6 +8,7 @@ import { ProductComponent } from "./public/pages/product/product.component";
 import { SearcherComponent } from "./public/pages/searcher/searcher.component";
 import { SettingsComponent } from "./public/pages/settings/settings.component";
 import { ShoppingCartComponent} from "./public/pages/shopping-cart/shopping-cart.component";
+import { ReportsPanelComponent} from "./public/pages/reports-panel/reports-panel.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'searcher', component: SearcherComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
+  { path: 'reports', component: ReportsPanelComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

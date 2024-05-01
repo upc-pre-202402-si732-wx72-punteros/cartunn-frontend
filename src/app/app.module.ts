@@ -19,6 +19,12 @@ import { ProductComponent } from './public/pages/product/product.component';
 import { SearcherComponent } from './public/pages/searcher/searcher.component';
 import { SettingsComponent } from './public/pages/settings/settings.component';
 import { ShoppingCartComponent } from './public/pages/shopping-cart/shopping-cart.component';
+import { CardComponent } from './reports/components/card/card.component';
+import { ReportsPanelComponent } from './public/pages/reports-panel/reports-panel.component';
+import { MatCard } from "@angular/material/card";
+import { MatCardContent } from "@angular/material/card";
+import { MatCardTitle } from "@angular/material/card";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,9 @@ import { ShoppingCartComponent } from './public/pages/shopping-cart/shopping-car
     ProductComponent,
     SearcherComponent,
     SettingsComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    CardComponent,
+    ReportsPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +48,11 @@ import { ShoppingCartComponent } from './public/pages/shopping-cart/shopping-car
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardContent,
+    MatCard,
+    MatCardTitle,
+    HttpClientModule
 ],
   providers: [
     provideAnimationsAsync()

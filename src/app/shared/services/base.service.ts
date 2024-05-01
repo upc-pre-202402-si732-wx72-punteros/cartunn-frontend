@@ -6,9 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BaseService {
-  private baseUrl = 'http://localhost:3000';
+  protected baseUrl = 'http://localhost:3000';
 
-  constructor(private http: HttpClient) { }
+  constructor(protected http: HttpClient) { }
 
   getProductos(): Observable<any> {
     return this.http.get(`${this.baseUrl}/products`);
@@ -16,14 +16,6 @@ export class BaseService {
 
   getFavoritesList(): Observable<any> {
     return this.http.get(`${this.baseUrl}/favorites-list`);
-  }
-
-  getNotifications(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/notifications`);
-  }
-
-  getStatusReport(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/status-report`);
   }
 
   getYourCart(): Observable<any> {
