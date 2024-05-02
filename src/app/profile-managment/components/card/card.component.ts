@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NotificationsApiService} from "../../services/notifications-api.service";
+import { NotificationsApiService} from "../../services/notifications-api/notifications-api.service";
 import { Notifications} from "../../model/notifications.entity";
 
 @Component({

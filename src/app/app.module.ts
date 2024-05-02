@@ -11,19 +11,19 @@ import { HelpCenterComponent } from './public/pages/help-center/help-center.comp
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import { ProductComponent } from './public/pages/product/product.component';
 import { SearcherComponent } from './public/pages/searcher/searcher.component';
-import { SettingsComponent } from './public/pages/settings/settings.component';
-import { ShoppingCartComponent } from './public/pages/shopping-cart/shopping-cart.component';
+import { SettingsComponent } from './profile-managment/pages/settings/settings.component';
+import { ShoppingCartComponent } from './subscription-and-payments/pages/shopping-cart/shopping-cart.component';
 import { ReportsPanelComponent } from './public/pages/reports-panel/reports-panel.component';
-import { NotificationsPanelComponent } from './public/pages/notifications-panel/notifications-panel.component';
-import { NotificationsCardComponent } from './notifications/components/card/card.component';
+import { NotificationsPanelComponent } from './profile-managment/pages/notifications-panel/notifications-panel.component';
+import { NotificationsCardComponent } from './profile-managment/components/card/card.component';
 import { ReportCardComponent } from "./reports/components/card/card.component";
 import { ProductsCardComponent } from './products/components/card/card.component';
-import { LoginComponent } from './public/pages/login/login.component';
-import { SignUpComponent } from './public/pages/sign-up/sign-up.component';
-import { ResetPasswordComponent } from './public/pages/reset-password/reset-password.component';
-import { LoginFormComponent } from './public/components/login-form/login-form.component';
-import { ResetPasswordFormComponent } from './public/components/reset-password-form/reset-password-form.component';
-import { SignUpFormComponent } from './public/components/sign-up-form/sign-up-form.component';
+import { LoginComponent } from './IAM/pages/login/login.component';
+import { SignUpComponent } from './IAM/pages/sign-up/sign-up.component';
+import { ResetPasswordComponent } from './IAM/pages/reset-password/reset-password.component';
+import { LoginFormComponent } from './IAM/components/login-form/login-form.component';
+import { ResetPasswordFormComponent } from './IAM/components/reset-password-form/reset-password-form.component';
+import { SignUpFormComponent } from './IAM/components/sign-up-form/sign-up-form.component';
 
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -40,13 +40,13 @@ import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
 import { MatMenuModule } from "@angular/material/menu";
 
-import { CardSettingsComponent } from './settings/components/card-settings/card-settings.component';
-import { FormSettingsComponent } from './settings/components/form-settings/form-settings.component';
-import { HomeContentComponent } from './public/pages/home-content/home-content.component';
+import { CardSettingsComponent } from './profile-managment/components/card-settings/card-settings.component';
+import { FormSettingsComponent } from './profile-managment/components/form-settings/form-settings.component';
+import { HomeContentComponent } from './dashboard-and-analytics/pages/home-content/home-content.component';
 import { ProductsComponent } from './products/components/products/products.component';
 
-import { FavoritesCardComponent } from './favorites/components/card/card.component';
-import { FavoritesPanelComponent } from './public/pages/favorites-panel/favorites-panel.component';
+import { FavoritesCardComponent } from './dashboard-and-analytics/components/card/card.component';
+import { FavoritesPanelComponent } from './profile-managment/pages/favorites-panel/favorites-panel.component';
 
 @NgModule({
   declarations: [

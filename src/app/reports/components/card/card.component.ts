@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ReportsApiService } from '../../services/reports-api.service';
+import { ReportsApiService } from '../../services/reports-api/reports-api.service';
 import { Report } from '../../model/report.entity';
 
 @Component({

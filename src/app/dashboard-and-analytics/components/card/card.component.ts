@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FavoritesApiService } from "../../services/favorites-api.service";
+import { FavoritesApiService } from "../../services/favorites-api/favorites-api.service";
 import { Product } from "../../../products/model/product.entity";
 
 @Component({
