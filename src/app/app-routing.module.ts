@@ -16,7 +16,7 @@ import { ResetPasswordComponent} from "./IAM/pages/reset-password/reset-password
 import { FavoritesPanelComponent} from "./profile-managment/pages/favorites-panel/favorites-panel.component";
 
 const routes: Routes = [
-  { path: 'home', component: HomeContentComponent },
+  { path: '', component: HomeContentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
