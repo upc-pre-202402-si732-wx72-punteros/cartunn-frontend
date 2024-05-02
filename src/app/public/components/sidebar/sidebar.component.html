@@ -2,7 +2,7 @@
     <mat-toolbar class="toolbar">
       <section class="toolbar-section-left">
         <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-        <div class="sidebar-logo" *ngIf="!mobileQuery.matches || isLogoExpanded || !isSearcherExpanded ">
+        <div class="sidebar-logo" *ngIf="!mobileQuery.matches || isLogoExpanded || !isSearcherExpanded" routerLink="/home">
           <h1 class="sidebar-text sidebar-text-left">CAR</h1>
           <h1 class="sidebar-text sidebar-text-right">TUNN</h1>
         </div>
