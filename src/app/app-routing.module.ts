@@ -28,7 +28,6 @@ const routes: Routes = [
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'reports', component: ReportsPanelComponent },
   { path: 'notifications', component: NotificationsPanelComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
