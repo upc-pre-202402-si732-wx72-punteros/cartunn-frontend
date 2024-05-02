@@ -1,4 +1,4 @@
 export const environment = {
   production:false,
-  serverBasePath: 'http://localhost:3000'
+  serverBasePath: 'https://cartunn-fake-api.onrender.com/api/products'
 };
