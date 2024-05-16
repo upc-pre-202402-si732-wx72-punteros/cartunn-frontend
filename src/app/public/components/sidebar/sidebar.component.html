@@ -1,100 +1,146 @@
-  <div class="sidebar-container" [class.toolbar-is-mobile]="mobileQuery.matches">
-    <mat-toolbar class="toolbar">
-      <section class="toolbar-section-left">
-        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-        <div class="sidebar-logo" *ngIf="!mobileQuery.matches || isLogoExpanded || !isSearcherExpanded" routerLink="/home">
-          <h1 class="sidebar-text sidebar-text-left">CAR</h1>
-          <h1 class="sidebar-text sidebar-text-right">TUNN</h1>
-        </div>
-        <span class="toolbar-pages" *ngIf="!mobileQuery.matches">Pages/</span>
-      </section>
-      <section style="display: flex">
-        <section class="searcher" *ngIf="!mobileQuery.matches || isSearcherExpanded">
-          <button mat-icon-button (click)="isSearcherExpanded = !isSearcherExpanded">
-              <mat-icon fontIcon="search"></mat-icon>
-          </button>
-          <input class="toolbar-search" type="text" placeholder="Search" (input)="onSearchInput($event)">
-        </section>
-
-        <button mat-icon-button *ngIf="mobileQuery.matches && !isSearcherExpanded" (click)="isSearcherExpanded = true; isLogoExpanded = false; areIconsExpanded = false">
+<div class="sidebar-container" [class.toolbar-is-mobile]="mobileQuery.matches">
+  <mat-toolbar class="toolbar">
+    <section class="toolbar-section-left">
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+      <div class="sidebar-logo" *ngIf="!mobileQuery.matches || isLogoExpanded || !isSearcherExpanded ">
+        <h1 class="sidebar-text sidebar-text-left">CAR</h1>
+        <h1 class="sidebar-text sidebar-text-right">TUNN</h1>
+      </div>
+      <span class="toolbar-pages" *ngIf="!mobileQuery.matches">Pages/</span>
+    </section>
+    <section style="display: flex">
+      <section class="searcher" *ngIf="!mobileQuery.matches || isSearcherExpanded">
+        <button mat-icon-button (click)="isSearcherExpanded = !isSearcherExpanded">
           <mat-icon fontIcon="search"></mat-icon>
         </button>
-        <button mat-icon-button *ngIf="(mobileQuery.matches && !isSearcherExpanded) || !mobileQuery.matches || areIconsExpanded" routerLink="/favorites">
-          <mat-icon fontIcon="favorites" ></mat-icon>
-        </button>
-        <button mat-icon-button *ngIf="(mobileQuery.matches && !isSearcherExpanded) || !mobileQuery.matches || areIconsExpanded" routerLink="/notifications">
-          <mat-icon fontIcon="notifications"></mat-icon>
-        </button>
-        <button mat-icon-button routerLink="/login">
-          <mat-icon fontIcon="account_circle"></mat-icon>
-        </button>
+        <input class="toolbar-search" type="text" placeholder="Search" (input)="onSearchInput($event)">
       </section>
-    </mat-toolbar>
-    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-        <mat-nav-list>
-          <section class="sidebar-subtext">
-              <span>PRINCIPAL</span>
-          </section>
-          <a mat-list-item routerLink="/">
-            <div class="sidebar-option">
-              <mat-icon aria-hidden="false" fontIcon="home"></mat-icon>
-              <span>Home</span>
-            </div>
-          </a>
-          <a mat-list-item routerLink="/favorites">
-            <div class="sidebar-option">
-              <mat-icon aria-hidden="false" fontIcon="favorites"></mat-icon>
-              <span>Favorites</span>
-            </div>
-          </a>
-          <a mat-list-item routerLink="/notifications">
-            <div class="sidebar-option">
-              <mat-icon aria-hidden="false" fontIcon="notifications"></mat-icon>
-              <span>Your notifications</span>
-            </div>
-          </a>
-          <a mat-list-item routerLink="/reports">
-            <div class="sidebar-option">
-              <mat-icon aria-hidden="false" fontIcon="report"></mat-icon>
-              <span>Reports</span>
-            </div>
-          </a>
-          <a mat-list-item routerLink="/shopping-cart">
-            <div class="sidebar-option">
-              <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
-              <span>Shopping cart</span>
-            </div>
-          </a>
-          <section class="sidebar-subtext">
-            <span>PREFERENCES</span>
-          </section>
-          <a mat-list-item>
-            <div class="sidebar-option" routerLink="/settings">
-              <mat-icon aria-hidden="false" fontIcon="tune"></mat-icon>
-              <span>Settings</span>
-            </div>
-          </a>
-          <a mat-list-item routerLink="/help-center">
-            <div class="sidebar-option">
-              <mat-icon aria-hidden="false" fontIcon="live_help"></mat-icon>
-              <span>Help & Center</span>
-            </div>
-          </a>
-          <a mat-list-item>
-            <div class="sidebar-option">
-              <mat-icon aria-hidden="false" fontIcon="dark_mode"></mat-icon>
-              <span>Dark mode</span>
-            </div>
-          </a>
-          <a mat-list-item>
-            <div class="sidebar-option">
-              <mat-icon aria-hidden="false" fontIcon="logout"></mat-icon>
-              <span>Log out</span>
-            </div>
-          </a>
-        </mat-nav-list>
-      </mat-sidenav>
-      <router-outlet></router-outlet>
-    </mat-sidenav-container>
-  </div>
+
+      <button mat-icon-button *ngIf="mobileQuery.matches && !isSearcherExpanded" (click)="isSearcherExpanded = true; isLogoExpanded = false; areIconsExpanded = false">
+        <mat-icon fontIcon="search"></mat-icon>
+      </button>
+      <button mat-icon-button routerLink="/login">
+        <mat-icon fontIcon="account_circle"></mat-icon>
+      </button>
+    </section>
+  </mat-toolbar>
+  <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list>
+
+
+        <section class="sidebar-subtext">
+          <span>PRINCIPAL</span>
+        </section>
+
+
+        <a mat-list-item *ngIf="isClientRoute()" routerLink="/client/home">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="home"></mat-icon>
+            <span>Client home</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isClientRoute()"  routerLink="/client/favorites">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="favorites"></mat-icon>
+            <span>Favorites</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isClientRoute()" routerLink="/client/notifications">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="notifications"></mat-icon>
+            <span>Your notifications</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isClientRoute()" routerLink="/client/reports">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="report"></mat-icon>
+            <span>Reports</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isClientRoute()" routerLink="/client/shopping-cart">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
+            <span>Shopping cart</span>
+          </div>
+        </a>
+
+
+
+        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/home">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="home"></mat-icon>
+            <span>Staff home</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/upload-item">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="upload_item"></mat-icon>
+            <span>Upload item</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/update-item">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="post_add"></mat-icon>
+            <span>Update item</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/remove-item">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="delete"></mat-icon>
+            <span>Remove item</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/notify-costumer">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="notifications"></mat-icon>
+            <span>Notify costumer</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/notify-suppliers">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="directions_car"></mat-icon>
+            <span>Notify suppliers</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/manage-returns">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="assignment_return"></mat-icon>
+            <span>Manage returns</span>
+          </div>
+        </a>
+
+
+
+        <section class="sidebar-subtext">
+          <span>PREFERENCES</span>
+        </section>
+        <a mat-list-item>
+          <div class="sidebar-option" routerLink="/settings">
+            <mat-icon aria-hidden="false" fontIcon="tune"></mat-icon>
+            <span>Settings</span>
+          </div>
+        </a>
+        <a mat-list-item routerLink="/help-center">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="live_help"></mat-icon>
+            <span>Help & Center</span>
+          </div>
+        </a>
+        <a mat-list-item>
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="dark_mode"></mat-icon>
+            <span>Dark mode</span>
+          </div>
+        </a>
+        <a mat-list-item>
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="logout"></mat-icon>
+            <span>Log out</span>
+          </div>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+  </mat-sidenav-container>
+</div>

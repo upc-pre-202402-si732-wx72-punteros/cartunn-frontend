@@ -42,11 +42,12 @@ import { MatMenuModule } from "@angular/material/menu";
 
 import { CardSettingsComponent } from './profile-managment/components/card-settings/card-settings.component';
 import { FormSettingsComponent } from './profile-managment/components/form-settings/form-settings.component';
-import { HomeContentComponent } from './dashboard-and-analytics/pages/home-content/home-content.component';
 import { ProductsComponent } from './products/components/products/products.component';
 
 import { FavoritesCardComponent } from './dashboard-and-analytics/components/card/card.component';
 import { FavoritesPanelComponent } from './profile-managment/pages/favorites-panel/favorites-panel.component';
+import { HomeClientComponent } from './dashboard-and-analytics/pages/home-client/home-client.component';
+import { HomeStaffComponent } from './dashboard-and-analytics/pages/home-staff/home-staff.component';
 
 @NgModule({
   declarations: [
@@ -71,10 +72,11 @@ import { FavoritesPanelComponent } from './profile-managment/pages/favorites-pan
     SignUpFormComponent,
     CardSettingsComponent,
     FormSettingsComponent,
-    HomeContentComponent,
     ProductsComponent,
     FavoritesCardComponent,
-    FavoritesPanelComponent
+    FavoritesPanelComponent,
+    HomeClientComponent,
+    HomeStaffComponent
   ],
   imports: [
     BrowserModule,
