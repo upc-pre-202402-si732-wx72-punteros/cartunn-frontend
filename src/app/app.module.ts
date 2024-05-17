@@ -53,6 +53,8 @@ import { UploadComponent } from './products/components/interaction-crud/upload/u
 import { RemoveComponent } from './products/components/interaction-crud/remove/remove.component';
 import {FormsModule} from "@angular/forms";
 import {CommonModule} from "@angular/common";
+import { NotifyCustomerComponent } from './profile-managment/pages/notify-customer/notify-customer.component';
+import { NotifySuppliersComponent } from './profile-managment/pages/notify-suppliers/notify-suppliers.component';
 
 
 @NgModule({
@@ -85,7 +87,9 @@ import {CommonModule} from "@angular/common";
     HomeStaffComponent,
     UpdateComponent,
     UploadComponent,
-    RemoveComponent
+    RemoveComponent,
+    NotifyCustomerComponent,
+    NotifySuppliersComponent
   ],
   imports: [
     BrowserModule,

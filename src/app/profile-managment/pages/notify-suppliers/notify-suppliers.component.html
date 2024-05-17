@@ -1,0 +1,19 @@
+<div class="container">
+  <mat-card class="notification-card">
+    <form class="notification-form" #notificationForm="ngForm" (ngSubmit)="submitNotification()">
+      <h1 style="font-weight: bold;">Notify Suppliers</h1>
+      <mat-form-field class="example-full-width">
+        <mat-label>Email address</mat-label>
+        <input matInput placeholder="Enter email address" name="orderID" ngModel required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Enter Description" name="description" ngModel required></textarea>
+      </mat-form-field>
+      <div class="button-group">
+        <button mat-flat-button class="cancel-button">Cancel</button>
+        <button mat-flat-button color="primary">Save</button>
+      </div>
+    </form>
+  </mat-card>
+</div>
