@@ -27,13 +27,13 @@ import { SignUpFormComponent } from './IAM/components/sign-up-form/sign-up-form.
 
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from "@angular/material/expansion";
-import { MatCardModule } from "@angular/material/card";
+import {MatCard, MatCardModule} from "@angular/material/card";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
-import { MatFormFieldModule } from "@angular/material/form-field";
+import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatDatepickerModule } from "@angular/material/datepicker";
@@ -48,6 +48,14 @@ import { FavoritesCardComponent } from './dashboard-and-analytics/components/car
 import { FavoritesPanelComponent } from './profile-managment/pages/favorites-panel/favorites-panel.component';
 import { HomeClientComponent } from './dashboard-and-analytics/pages/home-client/home-client.component';
 import { HomeStaffComponent } from './dashboard-and-analytics/pages/home-staff/home-staff.component';
+import { UpdateComponent } from './products/components/interaction-crud/update/update.component';
+import { UploadComponent } from './products/components/interaction-crud/upload/upload.component';
+import { RemoveComponent } from './products/components/interaction-crud/remove/remove.component';
+import {FormsModule} from "@angular/forms";
+import {CommonModule} from "@angular/common";
+import { NotifyCustomerComponent } from './profile-managment/pages/notify-customer/notify-customer.component';
+import { NotifySuppliersComponent } from './profile-managment/pages/notify-suppliers/notify-suppliers.component';
+
 
 @NgModule({
   declarations: [
@@ -76,7 +84,12 @@ import { HomeStaffComponent } from './dashboard-and-analytics/pages/home-staff/h
     FavoritesCardComponent,
     FavoritesPanelComponent,
     HomeClientComponent,
-    HomeStaffComponent
+    HomeStaffComponent,
+    UpdateComponent,
+    UploadComponent,
+    RemoveComponent,
+    NotifyCustomerComponent,
+    NotifySuppliersComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +110,12 @@ import { HomeStaffComponent } from './dashboard-and-analytics/pages/home-staff/h
     MatCheckboxModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
+    MatFormField,
+    CommonModule,
+    MatCard,
+    MatIcon
   ],
   providers: [],
   bootstrap: [AppComponent]

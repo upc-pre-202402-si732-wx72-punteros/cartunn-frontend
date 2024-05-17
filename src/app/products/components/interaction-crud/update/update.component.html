@@ -1,0 +1,46 @@
+<div class="container">
+  <mat-card class="notification-card">
+    <form class="notification-form" #notificationForm="ngForm" (ngSubmit)="submitNotification()">
+      <h1 style="font-weight: bold;">Update item</h1>
+      <div class="form-row">
+        <mat-form-field class="example-half-width">
+          <mat-label>Id</mat-label>
+          <input matInput placeholder="Enter Id" name="orderID" ngModel required>
+        </mat-form-field>
+        <mat-form-field class="example-half-width">
+          <mat-label>New Name</mat-label>
+          <input matInput placeholder="Enter new name" name="orderID" ngModel required>
+        </mat-form-field>
+      </div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Enter Description" name="description" ngModel required></textarea>
+      </mat-form-field>
+      <div class="form-row">
+        <mat-form-field class="example-half-width">
+          <mat-label>Model</mat-label>
+          <input matInput placeholder="Enter model" name="orderID" ngModel required>
+        </mat-form-field>
+        <mat-form-field class="example-half-width">
+          <mat-label>Manufacturer</mat-label>
+          <input matInput placeholder="Enter manufacturer" name="orderID" ngModel required>
+        </mat-form-field>
+      </div>
+      <mat-form-field class="example-half-width">
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="Enter price" name="orderID" ngModel required>
+      </mat-form-field>
+      <div class="form-row">
+        <div class="upload-container" (click)="onUploadClick()">
+          <mat-icon class="upload-icon" aria-hidden="false" fontIcon="cloud_upload"></mat-icon>
+          <span>Upload Image</span>
+        </div>
+        <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;">
+      </div>
+      <div class="button-group">
+        <button mat-flat-button class="cancel-button">Cancel</button>
+        <button mat-flat-button color="primary">Save</button>
+      </div>
+    </form>
+  </mat-card>
+</div>

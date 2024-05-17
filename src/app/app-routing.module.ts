@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 import { HelpCenterComponent } from "./public/pages/help-center/help-center.component";
 import { PageNotFoundComponent } from "./public/pages/page-not-found/page-not-found.component";
 import { ProductComponent } from "./public/pages/product/product.component";
@@ -15,6 +16,11 @@ import { ResetPasswordComponent } from "./IAM/pages/reset-password/reset-passwor
 import { FavoritesPanelComponent } from "./profile-managment/pages/favorites-panel/favorites-panel.component";
 import { HomeClientComponent } from "./dashboard-and-analytics/pages/home-client/home-client.component";
 import { HomeStaffComponent } from "./dashboard-and-analytics/pages/home-staff/home-staff.component";
+import {UploadComponent} from "./products/components/interaction-crud/upload/upload.component";
+import {UpdateComponent} from "./products/components/interaction-crud/update/update.component";
+import {RemoveComponent} from "./products/components/interaction-crud/remove/remove.component";
+import {NotifySuppliersComponent} from "./profile-managment/pages/notify-suppliers/notify-suppliers.component";
+import {NotifyCustomerComponent} from "./profile-managment/pages/notify-customer/notify-customer.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -30,6 +36,14 @@ const routes: Routes = [
   { path: 'client/searcher', component: SearcherComponent },
 
   { path: 'staff/home', component: HomeStaffComponent },
+  { path: 'staff/upload-item', component: UploadComponent },
+  { path: 'staff/update-item', component: UpdateComponent },
+  { path: 'staff/remove-item', component: RemoveComponent },
+  { path: 'staff/notify-suppliers', component: NotifySuppliersComponent },
+  { path: 'staff/notify-costumer', component: NotifyCustomerComponent },
+
+
+
 
   { path: 'settings', component: SettingsComponent },
   { path: 'help-center', component: HelpCenterComponent },

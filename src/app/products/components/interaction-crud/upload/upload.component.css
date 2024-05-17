@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.notification-card {
+  width: 400px;
+  margin:auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notification-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.example-half-width {
+  width: calc(50% - 8px);
+  margin-right: 16px;
+}
+
+.example-half-width:last-child {
+  margin-right: 0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.cancel-button {
+  margin-right: 8px;
+}
+.upload-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 50px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.upload-icon {
+  margin-right: 4px;
+}
