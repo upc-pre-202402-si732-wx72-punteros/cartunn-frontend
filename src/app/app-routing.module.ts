@@ -23,10 +23,11 @@ import { NotifyCustomerComponent } from './profile-managment/pages/notify-custom
 import { ManageReturnsComponent } from './profile-managment/pages/manage-returns/manage-returns.component';
 
 const routes: Routes = [
+  /* General routes*/
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
-
+  /* Client routes */
   { path: 'client/home', component: HomeClientComponent },
   { path: 'client/notifications', component: NotificationsPanelComponent },
   { path: 'client/favorites', component: FavoritesPanelComponent },
@@ -34,7 +35,7 @@ const routes: Routes = [
   { path: 'client/reports', component: ReportsPanelComponent },
   { path: 'client/product', component: ProductComponent },
   { path: 'client/searcher', component: SearcherComponent },
-
+  /* Staff routes */
   { path: 'staff/home', component: HomeStaffComponent },
   { path: 'staff/upload-item', component: UploadComponent },
   { path: 'staff/update-item', component: UpdateComponent },
@@ -42,7 +43,7 @@ const routes: Routes = [
   { path: 'staff/notify-suppliers', component: NotifySuppliersComponent },
   { path: 'staff/notify-costumer', component: NotifyCustomerComponent },
   { path: 'staff/manage-returns', component: ManageReturnsComponent },
-
+  /* Extra routes */
   { path: 'settings', component: SettingsComponent },
   { path: 'help-center', component: HelpCenterComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
