@@ -40,14 +40,6 @@
   font-style: italic;
 }
 
-.sidebar-text-left {
-  color: #595959;
-}
-
-.sidebar-text-right {
-  color: #5766F5;
-}
-
 .sidebar-subtext {
   padding: 1.5em 3em;
 }
@@ -55,11 +47,10 @@
 .sidebar-option {
   display: flex;
   margin: 2em 3em 2em 1.5em;
-
 }
 
 .sidebar-option mat-icon {
-  margin-right: 0.5em
+  margin-right: 0.5em;
 }
 
 .sidenav-container {

@@ -1,0 +1,24 @@
+<div class="product-refunds-container">
+  <mat-card
+    *ngFor="let product_refund of product_refunds"
+    class="card-container"
+    (click)="openDialog()"
+  >
+    <mat-card-header>
+      <img class="product-refund-image" [src]="product_refund.image" alt="" />
+    </mat-card-header>
+    <mat-card-content>
+      <h2>{{ product_refund.title }}</h2>
+      <p style="color: #a3aed0">{{ product_refund.date }}</p>
+      <p style="color: #596780">{{ product_refund.description }}</p>
+      <div style="width: 100%; display: flex; justify-content: flex-end">
+        <p
+          class="product-refund-status"
+          [style.background-color]="getColor(product_refund.status)"
+        >
+          {{ product_refund.status }}
+        </p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

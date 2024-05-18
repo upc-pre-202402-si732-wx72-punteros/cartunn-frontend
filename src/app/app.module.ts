@@ -16,7 +16,7 @@ import { ShoppingCartComponent } from './subscription-and-payments/pages/shoppin
 import { ReportsPanelComponent } from './public/pages/reports-panel/reports-panel.component';
 import { NotificationsPanelComponent } from './profile-managment/pages/notifications-panel/notifications-panel.component';
 import { NotificationsCardComponent } from './profile-managment/components/card/card.component';
-import { ReportCardComponent } from "./reports/components/card/card.component";
+import { ReportCardComponent } from './reports/components/card/card.component';
 import { ProductsCardComponent } from './products/components/card/card.component';
 import { LoginComponent } from './IAM/pages/login/login.component';
 import { SignUpComponent } from './IAM/pages/sign-up/sign-up.component';
@@ -24,21 +24,24 @@ import { ResetPasswordComponent } from './IAM/pages/reset-password/reset-passwor
 import { LoginFormComponent } from './IAM/components/login-form/login-form.component';
 import { ResetPasswordFormComponent } from './IAM/components/reset-password-form/reset-password-form.component';
 import { SignUpFormComponent } from './IAM/components/sign-up-form/sign-up-form.component';
+import { CardComponent } from './product-refunds/components/card/card.component';
+import { FormComponent } from './product-refunds/components/form/form.component';
 
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatIcon, MatIconModule} from '@angular/material/icon';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatExpansionModule } from "@angular/material/expansion";
-import {MatCard, MatCardModule} from "@angular/material/card";
-import { MatButtonToggleModule } from "@angular/material/button-toggle";
-import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
-import { MatInputModule } from "@angular/material/input";
-import { MatCheckboxModule } from "@angular/material/checkbox";
-import { MatDatepickerModule } from "@angular/material/datepicker";
-import { MatNativeDateModule } from "@angular/material/core";
-import { MatMenuModule } from "@angular/material/menu";
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCard, MatCardModule } from '@angular/material/card';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
 
 import { CardSettingsComponent } from './profile-managment/components/card-settings/card-settings.component';
 import { FormSettingsComponent } from './profile-managment/components/form-settings/form-settings.component';
@@ -51,11 +54,17 @@ import { HomeStaffComponent } from './dashboard-and-analytics/pages/home-staff/h
 import { UpdateComponent } from './products/components/interaction-crud/update/update.component';
 import { UploadComponent } from './products/components/interaction-crud/upload/upload.component';
 import { RemoveComponent } from './products/components/interaction-crud/remove/remove.component';
-import {FormsModule} from "@angular/forms";
-import {CommonModule} from "@angular/common";
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { NotifyCustomerComponent } from './profile-managment/pages/notify-customer/notify-customer.component';
 import { NotifySuppliersComponent } from './profile-managment/pages/notify-suppliers/notify-suppliers.component';
-
+import { ManageReturnsComponent } from './profile-managment/pages/manage-returns/manage-returns.component';
+import {
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogContent,
+  MatDialogTitle,
+} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -89,7 +98,10 @@ import { NotifySuppliersComponent } from './profile-managment/pages/notify-suppl
     UploadComponent,
     RemoveComponent,
     NotifyCustomerComponent,
-    NotifySuppliersComponent
+    NotifySuppliersComponent,
+    ManageReturnsComponent,
+    CardComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
@@ -115,9 +127,14 @@ import { NotifySuppliersComponent } from './profile-managment/pages/notify-suppl
     MatFormField,
     CommonModule,
     MatCard,
-    MatIcon
+    MatIcon,
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions,
+    MatDialogClose,
+    MatSelectModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

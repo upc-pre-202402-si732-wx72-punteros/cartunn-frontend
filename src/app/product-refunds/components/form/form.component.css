@@ -1,0 +1,63 @@
+.form-container {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.custom-button-toggle-group {
+  border: 1px solid #5766f5;
+  border-radius: 0.25rem;
+}
+
+.custom-button-toggle-group .mat-button-toggle-appearance-standard {
+  color: #5766f5;
+  display: flex;
+}
+
+.custom-button-toggle-group .mat-button-toggle {
+  width: 100%;
+  border: 0px;
+  border-radius: 0.25rem;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.custom-button-toggle-group .mat-button-toggle-checked {
+  background-color: #5766f5;
+  color: white;
+}
+
+.inputs-container {
+  display: grid;
+  grid-template-columns: 7rem auto;
+  gap: 1rem;
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.status {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

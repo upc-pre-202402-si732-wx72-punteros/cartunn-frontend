@@ -1,0 +1,53 @@
+<div style="display: flex; justify-content: space-between; margin: 0">
+  <h1 style="color: #2b3674; margin: 0" mat-dialog-title>Manage refunds</h1>
+  <button
+    mat-icon-button
+    mat-dialog-close
+    color="primary"
+    style="margin: 1rem"
+    aria-label="Example icon button with a home icon"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<mat-dialog-content>
+  <div class="form-container">
+    <div class="inputs-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Id</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    <div class="status">
+      <p>STATUS</p>
+      <mat-form-field style="width: 100%" appearance="outline">
+        <mat-label>Status</mat-label>
+        <mat-select>
+          <mat-option value="one">Rejected</mat-option>
+          <mat-option value="two">Processing</mat-option>
+          <mat-option value="two">Processed</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="buttons-container">
+      <button style="padding: 1.5rem" mat-dialog-close mat-flat-button>
+        CANCEL
+      </button>
+      <button
+        mat-dialog-close
+        style="background-color: #5766f5; color: white; padding: 1.5rem"
+        mat-flat-button
+      >
+        SAVE
+      </button>
+    </div>
+  </div>
+</mat-dialog-content>
