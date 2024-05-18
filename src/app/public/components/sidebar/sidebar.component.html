@@ -1,22 +1,45 @@
 <div class="sidebar-container" [class.toolbar-is-mobile]="mobileQuery.matches">
   <mat-toolbar class="toolbar">
     <section class="toolbar-section-left">
-      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-      <div class="sidebar-logo" *ngIf="!mobileQuery.matches || isLogoExpanded || !isSearcherExpanded ">
-        <h1 class="sidebar-text sidebar-text-left">CAR</h1>
-        <h1 class="sidebar-text sidebar-text-right">TUNN</h1>
+      <button mat-icon-button (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div
+        class="sidebar-logo"
+        *ngIf="!mobileQuery.matches || isLogoExpanded || !isSearcherExpanded"
+      >
+        <img src="../../../../assets/CARTUNN-logo.svg" alt="" />
       </div>
       <span class="toolbar-pages" *ngIf="!mobileQuery.matches">Pages/</span>
     </section>
     <section style="display: flex">
-      <section class="searcher" *ngIf="!mobileQuery.matches || isSearcherExpanded">
-        <button mat-icon-button (click)="isSearcherExpanded = !isSearcherExpanded">
+      <section
+        class="searcher"
+        *ngIf="!mobileQuery.matches || isSearcherExpanded"
+      >
+        <button
+          mat-icon-button
+          (click)="isSearcherExpanded = !isSearcherExpanded"
+        >
           <mat-icon fontIcon="search"></mat-icon>
         </button>
-        <input class="toolbar-search" type="text" placeholder="Search" (input)="onSearchInput($event)">
+        <input
+          class="toolbar-search"
+          type="text"
+          placeholder="Search"
+          (input)="onSearchInput($event)"
+        />
       </section>
 
-      <button mat-icon-button *ngIf="mobileQuery.matches && !isSearcherExpanded" (click)="isSearcherExpanded = true; isLogoExpanded = false; areIconsExpanded = false">
+      <button
+        mat-icon-button
+        *ngIf="mobileQuery.matches && !isSearcherExpanded"
+        (click)="
+          isSearcherExpanded = true;
+          isLogoExpanded = false;
+          areIconsExpanded = false
+        "
+      >
         <mat-icon fontIcon="search"></mat-icon>
       </button>
       <button mat-icon-button routerLink="/login">
@@ -24,15 +47,20 @@
       </button>
     </section>
   </mat-toolbar>
-  <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+  <mat-sidenav-container
+    class="sidenav-container"
+    [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+  >
+    <mat-sidenav
+      #snav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56"
+    >
       <mat-nav-list>
-
-
         <section class="sidebar-subtext">
           <span>PRINCIPAL</span>
         </section>
-
 
         <a mat-list-item *ngIf="isClientRoute()" routerLink="/client/home">
           <div class="sidebar-option">
@@ -40,13 +68,17 @@
             <span>Client home</span>
           </div>
         </a>
-        <a mat-list-item *ngIf="isClientRoute()"  routerLink="/client/favorites">
+        <a mat-list-item *ngIf="isClientRoute()" routerLink="/client/favorites">
           <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="favorites"></mat-icon>
             <span>Favorites</span>
           </div>
         </a>
-        <a mat-list-item *ngIf="isClientRoute()" routerLink="/client/notifications">
+        <a
+          mat-list-item
+          *ngIf="isClientRoute()"
+          routerLink="/client/notifications"
+        >
           <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="notifications"></mat-icon>
             <span>Your notifications</span>
@@ -58,14 +90,16 @@
             <span>Reports</span>
           </div>
         </a>
-        <a mat-list-item *ngIf="isClientRoute()" routerLink="/client/shopping-cart">
+        <a
+          mat-list-item
+          *ngIf="isClientRoute()"
+          routerLink="/client/shopping-cart"
+        >
           <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
             <span>Shopping cart</span>
           </div>
         </a>
-
-
 
         <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/home">
           <div class="sidebar-option">
@@ -91,26 +125,39 @@
             <span>Remove item</span>
           </div>
         </a>
-        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/notify-costumer">
+        <a
+          mat-list-item
+          *ngIf="isStaffRoute()"
+          routerLink="/staff/notify-costumer"
+        >
           <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="notifications"></mat-icon>
             <span>Notify costumer</span>
           </div>
         </a>
-        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/notify-suppliers">
+        <a
+          mat-list-item
+          *ngIf="isStaffRoute()"
+          routerLink="/staff/notify-suppliers"
+        >
           <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="directions_car"></mat-icon>
             <span>Notify suppliers</span>
           </div>
         </a>
-        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/manage-returns">
+        <a
+          mat-list-item
+          *ngIf="isStaffRoute()"
+          routerLink="/staff/manage-returns"
+        >
           <div class="sidebar-option">
-            <mat-icon aria-hidden="false" fontIcon="assignment_return"></mat-icon>
+            <mat-icon
+              aria-hidden="false"
+              fontIcon="assignment_return"
+            ></mat-icon>
             <span>Manage returns</span>
           </div>
         </a>
-
-
 
         <section class="sidebar-subtext">
           <span>PREFERENCES</span>
