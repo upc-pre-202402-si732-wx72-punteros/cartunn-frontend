@@ -209,5 +209,28 @@
       "status": "Processed",
       "image": "https://www.autotuningperu.pe/wp-content/uploads/2021/10/54.jpg"
     }
+  ],
+  "product-refunds": [
+    {
+      "title": "Headlights LED Tail Lights Ford",
+      "description": "Double oval sport exhaust tailpipe 65x55x160. Made in stainless steel a.",
+      "date": "2022-05-01",
+      "status": "Rejected",
+      "image": "https://www.autotuningperu.pe/wp-content/uploads/2022/04/car-led-fog-run-head-lamp-cover-drl-dayl_main-1.jpg"
+    },
+    {
+      "title": "Headlights LED Tail Lights Ford",
+      "description": "Double oval sport exhaust tailpipe 65x55x160. Made in stainless steel a.",
+      "date": "2022-05-01",
+      "status": "Processing",
+      "image": "https://www.autotuningperu.pe/wp-content/uploads/2022/04/car-led-fog-run-head-lamp-cover-drl-dayl_main-1.jpg"
+    },
+    {
+      "title": "Headlights LED Tail Lights Ford",
+      "description": "Double oval sport exhaust tailpipe 65x55x160. Made in stainless steel a.",
+      "date": "2022-05-01",
+      "status": "Processed",
+      "image": "https://www.autotuningperu.pe/wp-content/uploads/2021/10/1.jpg"
+    }
   ]
 }
