@@ -15,10 +15,6 @@ export class BaseService {
     return this.http.get(`${this.baseUrl}/your-cart`);
   }
 
-  getOrders(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/orders`);
-  }
-
   getReturnsList(): Observable<any> {
     return this.http.get(`${this.baseUrl}/returns-list`);
   }

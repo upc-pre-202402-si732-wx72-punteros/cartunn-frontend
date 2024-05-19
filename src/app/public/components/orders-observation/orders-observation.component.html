@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Write an observation {{data.observation}}</h2>
+<mat-dialog-content>
+  <mat-form-field  appearance="outline">
+    <mat-label>Description</mat-label>
+    <input matInput placeholder="Description">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Save</button>
+</mat-dialog-actions>
