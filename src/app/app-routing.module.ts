@@ -21,6 +21,7 @@ import { RemoveComponent } from './products/components/interaction-crud/remove/r
 import { NotifySuppliersComponent } from './profile-managment/pages/notify-suppliers/notify-suppliers.component';
 import { NotifyCustomerComponent } from './profile-managment/pages/notify-customer/notify-customer.component';
 import { ManageReturnsComponent } from './profile-managment/pages/manage-returns/manage-returns.component';
+import {OrdersComponent} from "./public/pages/orders/orders.component";
 
 const routes: Routes = [
   /* General routes*/
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'staff/notify-suppliers', component: NotifySuppliersComponent },
   { path: 'staff/notify-costumer', component: NotifyCustomerComponent },
   { path: 'staff/manage-returns', component: ManageReturnsComponent },
+  { path: 'orders', component: OrdersComponent },
   /* Extra routes */
   { path: 'settings', component: SettingsComponent },
   { path: 'help-center', component: HelpCenterComponent },

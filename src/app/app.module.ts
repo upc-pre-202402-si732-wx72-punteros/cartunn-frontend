@@ -35,11 +35,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCard, MatCardModule } from '@angular/material/card';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import {MatFormField, MatFormFieldModule, MatLabel} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+import {MatNativeDateModule, provideNativeDateAdapter} from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 
@@ -62,9 +62,15 @@ import { ManageReturnsComponent } from './profile-managment/pages/manage-returns
 import {
   MatDialogActions,
   MatDialogClose,
-  MatDialogContent,
+  MatDialogContent, MatDialogModule,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { OrdersObservationComponent } from './public/components/orders-observation/orders-observation.component';
+import { OrdersComponent } from './public/pages/orders/orders.component';
+import {OrderTableComponent} from "./orders/components/table/table.component";
+import {MatTable, MatTableModule} from "@angular/material/table";
+import {CdkCellDef, CdkFooterRowDef, CdkHeaderCellDef, CdkHeaderRowDef, CdkTable} from "@angular/cdk/table";
+import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
 
 @NgModule({
   declarations: [
@@ -102,6 +108,9 @@ import {
     ManageReturnsComponent,
     CardComponent,
     FormComponent,
+    OrdersObservationComponent,
+    OrdersComponent,
+    OrderTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -133,8 +142,27 @@ import {
     MatDialogActions,
     MatDialogClose,
     MatSelectModule,
+    MatTable,
+    MatTableModule,
+    CdkTable,
+    CdkHeaderCellDef,
+    CdkCellDef,
+    CdkHeaderRowDef,
+    CdkTable,
+    CdkFooterRowDef,
+    CdkFooterRowDef,
+    MatDialogModule,
+    MatFormField,
+    FormsModule,
+    MatLabel,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync(),
+    provideNativeDateAdapter()
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
