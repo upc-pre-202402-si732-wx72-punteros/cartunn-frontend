@@ -1,5 +1,5 @@
 <div class="sidebar-container" [class.toolbar-is-mobile]="mobileQuery.matches">
-  <mat-toolbar class="toolbar">
+  <mat-toolbar class="toolbar" *ngIf="!isAuthRoute()">
     <section class="toolbar-section-left">
       <button mat-icon-button (click)="snav.toggle()">
         <mat-icon>menu</mat-icon>
@@ -101,6 +101,11 @@
           </div>
         </a>
 
+
+
+
+
+
         <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/home">
           <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="home"></mat-icon>
@@ -159,21 +164,40 @@
           </div>
         </a>
 
+
+
+
         <section class="sidebar-subtext">
           <span>PREFERENCES</span>
         </section>
-        <a mat-list-item>
-          <div class="sidebar-option" routerLink="/settings">
+        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/settings">
+          <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="tune"></mat-icon>
             <span>Settings</span>
           </div>
         </a>
-        <a mat-list-item routerLink="/help-center">
+        <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/help-center">
           <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="live_help"></mat-icon>
             <span>Help & Center</span>
           </div>
         </a>
+
+        <a mat-list-item *ngIf="isClientRoute()" routerLink="/client/settings">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="tune"></mat-icon>
+            <span>Settings</span>
+          </div>
+        </a>
+        <a mat-list-item *ngIf="isClientRoute()" routerLink="/client/help-center">
+          <div class="sidebar-option">
+            <mat-icon aria-hidden="false" fontIcon="live_help"></mat-icon>
+            <span>Help & Center</span>
+          </div>
+        </a>
+
+
+
         <a mat-list-item>
           <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="dark_mode"></mat-icon>

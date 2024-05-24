@@ -14,14 +14,13 @@ import { SignUpComponent } from './IAM/pages/sign-up/sign-up.component';
 import { ResetPasswordComponent } from './IAM/pages/reset-password/reset-password.component';
 import { FavoritesPanelComponent } from './profile-managment/pages/favorites-panel/favorites-panel.component';
 import { HomeClientComponent } from './dashboard-and-analytics/pages/home-client/home-client.component';
-import { HomeStaffComponent } from './dashboard-and-analytics/pages/home-staff/home-staff.component';
 import { UploadComponent } from './products/components/interaction-crud/upload/upload.component';
 import { UpdateComponent } from './products/components/interaction-crud/update/update.component';
 import { RemoveComponent } from './products/components/interaction-crud/remove/remove.component';
 import { NotifySuppliersComponent } from './profile-managment/pages/notify-suppliers/notify-suppliers.component';
 import { NotifyCustomerComponent } from './profile-managment/pages/notify-customer/notify-customer.component';
 import { ManageReturnsComponent } from './profile-managment/pages/manage-returns/manage-returns.component';
-import {OrdersComponent} from "./public/pages/orders/orders.component";
+import { OrdersComponent } from "./public/pages/orders/orders.component";
 
 const routes: Routes = [
   /* General routes*/
@@ -36,6 +35,9 @@ const routes: Routes = [
   { path: 'client/reports', component: ReportsPanelComponent },
   { path: 'client/product', component: ProductComponent },
   { path: 'client/searcher', component: SearcherComponent },
+  { path: 'client/settings', component: SettingsComponent },
+  { path: 'client/help-center', component: HelpCenterComponent },
+
   /* Staff routes */
   { path: 'staff/home', component: OrdersComponent },
   { path: 'staff/upload-item', component: UploadComponent },
@@ -44,9 +46,10 @@ const routes: Routes = [
   { path: 'staff/notify-suppliers', component: NotifySuppliersComponent },
   { path: 'staff/notify-costumer', component: NotifyCustomerComponent },
   { path: 'staff/manage-returns', component: ManageReturnsComponent },
+  { path: 'staff/settings', component: SettingsComponent },
+  { path: 'staff/help-center', component: HelpCenterComponent },
+
   /* Extra routes */
-  { path: 'settings', component: SettingsComponent },
-  { path: 'help-center', component: HelpCenterComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

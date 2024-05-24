@@ -16,7 +16,7 @@ export class SidebarComponent implements OnDestroy {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, public router: Router) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -40,5 +40,10 @@ export class SidebarComponent implements OnDestroy {
 
   isStaffRoute(): boolean {
     return this.router.url.includes('/staff');
+  }
+
+  isAuthRoute(): boolean {
+    const authRoutes = ['/login', '/sign-up', '/reset-password'];
+    return authRoutes.includes(this.router.url);
   }
 }
