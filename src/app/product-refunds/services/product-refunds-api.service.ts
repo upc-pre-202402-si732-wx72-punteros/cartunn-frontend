@@ -7,7 +7,7 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class ProductRefundsApiService extends BaseService {
-  private productRefundsUrl = `${this.baseUrl}/product-refunds`;
+  private productRefundsUrl = `${this.baseUrl}/returns-list`;
 
   constructor(http: HttpClient) {
     super(http);

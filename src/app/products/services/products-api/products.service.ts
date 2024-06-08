@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class ProductsService extends BaseService{
-  private productsUrl = `${this.baseUrl}/products`;
+  private productsUrl = `${this.baseUrl}/`;
 
   constructor(http: HttpClient) {
     super(http);
