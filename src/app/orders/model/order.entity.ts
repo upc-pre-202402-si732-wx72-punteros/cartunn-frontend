@@ -1,18 +1,18 @@
 export class Order {
-  id: number;
-  title: string;
+  code: number;
+  name: string;
   description: string;
-  entry: string;
-  exit: string;
-  image: string;
+  entryDate: string;
+  exitDate: string;
+  id: number;
   status: string;
   constructor() {
-    this.id = 0;
-    this.title = "";
+    this.code = 0;
+    this.name = "";
     this.description = "";
-    this.entry = "";
-    this.exit = "";
-    this.image = "";
+    this.entryDate = "";
+    this.exitDate = "";
+    this.id = 0;
     this.status = "";
   }
 }
