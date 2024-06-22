@@ -1,4 +1,7 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
+import { NgForm } from "@angular/forms";
+import { Product} from "../../../model/product.entity";
+import { ProductsService} from "../../../services/products-api/products.service";
 
 @Component({
   selector: 'app-upload',
@@ -7,8 +10,10 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 })
 export class UploadComponent {
   @ViewChild('fileInput') fileInput!: ElementRef;
+  product: Product = new Product();
 
-  constructor() { }
+  constructor(private productService: ProductsService) {
+  }
 
   onUploadClick(): void {
     this.fileInput.nativeElement.click();
@@ -18,11 +23,16 @@ export class UploadComponent {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {
       const file = input.files[0];
-      console.log('File selected:', file.name);
+      this.product.image = URL.createObjectURL(file);
     }
   }
 
-  submitNotification(): void {
-    console.log('Form submitted successfully');
+  submitNotification(form: NgForm): void {
+    if (form.valid) {
+      this.productService.uploadProduct(this.product).subscribe(() => {
+        console.log('Product uploaded successfully');
+        form.reset();
+      });
+    }
   }
 }

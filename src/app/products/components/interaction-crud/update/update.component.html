@@ -1,6 +1,6 @@
 <div class="container">
   <mat-card class="notification-card">
-    <form class="notification-form" #notificationForm="ngForm" (ngSubmit)="submitNotification()">
+    <form class="notification-form" #notificationForm="ngForm" (ngSubmit)="submitNotification(notificationForm)">
       <h1 style="font-weight: bold;">Update item</h1>
       <div class="form-row">
         <mat-form-field class="example-half-width">

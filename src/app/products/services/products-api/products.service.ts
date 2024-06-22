@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {BaseService} from "../../../shared/services/base.service";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Product} from "../../model/product.entity";
 
 @Injectable({
   providedIn: 'root'
@@ -15,4 +16,14 @@ export class ProductsService extends BaseService{
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(this.productsUrl);
   }
+  uploadProduct(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.productsUrl, product);
+  }
+  updateProduct(product: Product): Observable<Product> {
+    return this.http.put<Product>(`${this.productsUrl}/${product.id}`, product);
+  }
+  deleteProduct(id: number): Observable<any> {
+    return this.http.delete(`${this.productsUrl}/${id}`);
+  }
+
 }
