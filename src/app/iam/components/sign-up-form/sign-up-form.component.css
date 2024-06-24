@@ -1,6 +1,4 @@
 .sign-up-form-container {
-  width: 100%;
-  max-width: 30rem;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   display: flex;
   flex-direction: column;

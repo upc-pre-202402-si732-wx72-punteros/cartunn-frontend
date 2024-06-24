@@ -1,6 +1,7 @@
-import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
+import {MediaMatcher} from '@angular/cdk/layout';
+import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthenticationService} from "../../../iam/services/authentication.service";
 
 @Component({
   selector: 'app-sidebar',
@@ -13,13 +14,24 @@ export class SidebarComponent implements OnDestroy {
   isLogoExpanded = true;
   areIconsExpanded = true;
   searchValue: string = '';
+  isSignedIn: boolean = false;
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, public router: Router) {
+  constructor(
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher,
+    public router: Router,
+    private authenticationService: AuthenticationService
+  ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    this.authenticationService
+      .isSignedIn
+      .subscribe(
+        isSignedIn => this.isSignedIn = isSignedIn
+      );
   }
 
   ngOnDestroy(): void {
@@ -45,5 +57,9 @@ export class SidebarComponent implements OnDestroy {
   isAuthRoute(): boolean {
     const authRoutes = ['/login', '/sign-up', '/reset-password'];
     return authRoutes.includes(this.router.url);
+  }
+
+  onSignOut() {
+    this.authenticationService.signOut();
   }
 }

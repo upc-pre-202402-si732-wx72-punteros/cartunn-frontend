@@ -1,3 +1,4 @@
 export const environment = {
-  serverBasePath: 'https://cartunnbackend.up.railway.app/api/v1'
+  production: true,
+  serverBasePath: 'http://localhost:8080/api/v1',
 };
