@@ -1,10 +1,10 @@
 export class Report {
-  "modified-part": string;
+  "modifiedPart": string;
   "date": string;
   "status": string;
 
   constructor(modified_part: "", date="", status="") {
-    this["modified-part"] = modified_part
+    this.modifiedPart = modified_part
     this.date = date
     this.status = status
   }

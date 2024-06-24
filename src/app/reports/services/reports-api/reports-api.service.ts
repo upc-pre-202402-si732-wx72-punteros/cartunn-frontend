@@ -7,7 +7,7 @@ import { BaseService } from '../../../shared/services/base.service';
   providedIn: 'root'
 })
 export class ReportsApiService extends BaseService {
-  private reportsUrl = `${this.baseUrl}/status-report`;
+  private reportsUrl = `${this.baseUrl}/tunning-task`;
 
   constructor(http: HttpClient) {
     super(http);
