@@ -4,6 +4,10 @@
       <button mat-icon-button aria-label="Favorite" (click)="toggleFavorite(product)" [class.favorite-active]="product.isFavorite">
         <mat-icon>{{ product.isFavorite ? 'favorite' : 'favorite_border' }}</mat-icon>
       </button>
+      <section>
+        <span><strong>Id product: </strong></span>
+        <span><strong>{{ product.id }}</strong></span>
+      </section>
       <span><strong>{{ product.title }}</strong></span>
       <span><strong>{{ product.model }}</strong></span>
       <img [src]="product.image" alt="{{ product.title }}" />

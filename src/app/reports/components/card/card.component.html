@@ -1,9 +1,9 @@
 <mat-card class="container">
   <mat-card-content>
-    <h1 class="title">✨ Status reports</h1>
+    <h1 class="title">✨ Status of your orders</h1>
     <div *ngFor="let notification of reports" class="notification">
       <div class="notification-info">
-        <span class="subtitle">{{ notification["modified-part"] }}</span>
+        <span class="subtitle">{{ notification.modifiedPart}}</span>
         <span class="notification-date">{{ notification.date }}</span>
       </div>
       <div class="notification-status">
