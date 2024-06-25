@@ -4,25 +4,25 @@
       <h1 style="font-weight: bold;">Upload item</h1>
       <mat-form-field class="example-full-width">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Enter name" name="orderID" ngModel required>
+        <input matInput placeholder="Enter name" name="product.title"  [(ngModel)]="product.title" required>
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Description</mat-label>
-        <textarea matInput placeholder="Enter Description" name="description" ngModel required></textarea>
+        <textarea matInput placeholder="Enter Description" name="product.description" [(ngModel)]="product.description" required></textarea>
       </mat-form-field>
       <div class="form-row">
         <mat-form-field class="example-half-width">
           <mat-label>Model</mat-label>
-          <input matInput placeholder="Enter model" name="orderID" ngModel required>
+          <input matInput placeholder="Enter model" name="product.model" [(ngModel)]="product.model" required>
         </mat-form-field>
         <mat-form-field class="example-half-width">
           <mat-label>Manufacturer</mat-label>
-          <input matInput placeholder="Enter manufacturer" name="orderID" ngModel required>
+          <input matInput placeholder="Enter manufacturer" name="product.manufacturer" [(ngModel)]="product.manufacturer" required>
         </mat-form-field>
       </div>
       <mat-form-field class="example-half-width">
         <mat-label>Price</mat-label>
-        <input matInput placeholder="Enter price" name="orderID" ngModel required>
+        <input matInput placeholder="Enter price" name="product.price" [(ngModel)]="product.price"  required>
       </mat-form-field>
       <div class="form-row">
         <div class="upload-container" (click)="onUploadClick()">
