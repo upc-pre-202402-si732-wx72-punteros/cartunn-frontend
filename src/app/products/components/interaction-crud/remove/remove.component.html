@@ -1,11 +1,11 @@
 <div class="container">
   <mat-card class="notification-card">
-    <form class="notification-form" #notificationForm="ngForm" (ngSubmit)="submitNotification(notificationForm)">
+    <form class="notification-form" #notificationForm="ngForm" (ngSubmit)="submitNotification(notificationForm);notificationForm.resetForm()">
       <h1 style="font-weight: bold;">Remove item by Id</h1>
       <h3 style="font-weight: normal;">Are you sure you want to delete this item(this action is irreversible) ?</h3>
       <mat-form-field class="example-full-width">
         <mat-label>Id</mat-label>
-        <input matInput placeholder="Enter Id" name="orderID" ngModel required>
+        <input matInput placeholder="Enter Id" name="id" [(ngModel)]="id" required>
       </mat-form-field>
       <div class="button-group">
         <button mat-flat-button class="cancel-button">Cancel</button>

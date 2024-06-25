@@ -15,7 +15,7 @@ export class RemoveComponent {
     if (form.valid) {
       this.productsService.deleteProduct(this.id).subscribe(() => {
         console.log('Product removed successfully');
-        form.reset();
+        form.resetForm();
       });
     }
   }
