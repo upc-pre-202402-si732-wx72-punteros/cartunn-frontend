@@ -12,37 +12,6 @@
       </div>
       <span class="toolbar-pages" *ngIf="!mobileQuery.matches">Pages/</span>
     </section>
-    <section style="display: flex">
-      <section
-        class="searcher"
-        *ngIf="!mobileQuery.matches || isSearcherExpanded"
-      >
-        <button
-          mat-icon-button
-          (click)="isSearcherExpanded = !isSearcherExpanded"
-        >
-          <mat-icon fontIcon="search"></mat-icon>
-        </button>
-        <input
-          class="toolbar-search"
-          type="text"
-          placeholder="Search"
-          (input)="onSearchInput($event)"
-        />
-      </section>
-
-      <button
-        mat-icon-button
-        *ngIf="mobileQuery.matches && !isSearcherExpanded"
-        (click)="
-          isSearcherExpanded = true;
-          isLogoExpanded = false;
-          areIconsExpanded = false
-        "
-      >
-        <mat-icon fontIcon="search"></mat-icon>
-      </button>
-    </section>
   </mat-toolbar>
   <mat-sidenav-container
     class="sidenav-container"
@@ -111,18 +80,20 @@
             <span>Upload item</span>
           </div>
         </a>
+        <!--
         <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/update-item">
           <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="post_add"></mat-icon>
             <span>Update item</span>
           </div>
-        </a>
+        </a>-->
         <a mat-list-item *ngIf="isStaffRoute()" routerLink="/staff/remove-item">
           <div class="sidebar-option">
             <mat-icon aria-hidden="false" fontIcon="delete"></mat-icon>
             <span>Remove item</span>
           </div>
         </a>
+        <!--
         <a
           mat-list-item
           *ngIf="isStaffRoute()"
@@ -142,7 +113,7 @@
             <mat-icon aria-hidden="false" fontIcon="directions_car"></mat-icon>
             <span>Notify suppliers</span>
           </div>
-        </a>
+        </a>-->
         <a
           mat-list-item
           *ngIf="isStaffRoute()"
