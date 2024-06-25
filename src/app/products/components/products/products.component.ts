@@ -37,7 +37,9 @@ export class ProductsComponent implements OnInit {
   onOrderClick(product: Product): void {
     this.orderApiService.getOrders().subscribe((data: any) => {
       this.orders = data;
-      this.lastOrder=this.orders[this.orders.length-1].code;
+      if(this.orders.length>0) {
+        this.lastOrder = this.orders[this.orders.length - 1].code;
+      }
     });
     this.order=new Order();
     this.order.code=this.lastOrder+1;
