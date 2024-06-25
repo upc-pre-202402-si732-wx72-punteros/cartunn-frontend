@@ -28,8 +28,6 @@ export class UploadComponent {
   }
 
   submitNotification(form: NgForm): void {
-    console.log(this.product);
-
     if (form.valid) {
       this.productService.uploadProduct(this.product).subscribe(() => {
         console.log('Product uploaded successfully');
