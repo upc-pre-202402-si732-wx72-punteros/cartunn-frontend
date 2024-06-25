@@ -7,7 +7,7 @@
         <span><strong>{{ product.model }}</strong></span>
         <img [src]="product.image" alt="{{ product.title }}" />
         <span class="price"><strong>${{ product.price }}</strong></span>
-        <button mat-flat-button class="order-button" color="primary">ORDER</button>
+        <button mat-flat-button class="order-button" color="primary" (click)="onOrderClick(product)">ORDER</button>
         <mat-card-actions class="">
           <!--
           <button mat-icon-button (click)="removeFromFavorites(product.id)" color="white" aria-label="Delete">
