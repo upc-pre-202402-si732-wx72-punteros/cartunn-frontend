@@ -7,7 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-card-product-refunds',
   templateUrl: './card.component.html',
-  styleUrl: './card.component.css',
+  styleUrls: ['./card.component.css'],
 })
 export class CardComponent {
   product_refunds: ProductRefund[] = [];
@@ -18,9 +18,12 @@ export class CardComponent {
   ) {}
 
   ngOnInit(): void {
-    this.productRefundsApiService.getRefunds().subscribe((data: any) => {
+    this.loadRefunds();
+  }
+
+  loadRefunds(): void {
+    this.productRefundsApiService.getRefunds().subscribe((data: ProductRefund[]) => {
       this.product_refunds = data;
-      console.log(this.product_refunds);
     });
   }
 
@@ -37,7 +40,25 @@ export class CardComponent {
     }
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(FormComponent);
+  openDialog(productRefund: ProductRefund): void {
+    const dialogRef = this.dialog.open(FormComponent, {
+      data: { ...productRefund },
+    });
+
+    dialogRef.afterClosed().subscribe((result: ProductRefund) => {
+      if (result) {
+        this.productRefundsApiService
+          .updateProductRefund(result)
+          .subscribe((updatedRefund: ProductRefund) => {
+            // Actualizar el refund en la lista local
+            const index = this.product_refunds.findIndex(
+              (r) => r.id === updatedRefund.id
+            );
+            if (index !== -1) {
+              this.product_refunds[index] = updatedRefund;
+            }
+          });
+      }
+    });
   }
 }

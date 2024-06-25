@@ -1,8 +1,8 @@
 <div class="product-refunds-container">
   <mat-card
-    *ngFor="let product_refund of product_refunds"
+    *ngFor="let product_refund of product_refunds; let i = index"
     class="card-container"
-    (click)="openDialog()"
+    (click)="openDialog(product_refund)"
   >
     <mat-card-header>
       <img class="product-refund-image" [src]="product_refund.image" alt="" />
